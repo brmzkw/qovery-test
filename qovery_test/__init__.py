@@ -18,10 +18,11 @@ class User(db.Model):
 
 db.create_all()
 
-for username in ('admin', 'guest'):
-    user = User(username=username, email=f'{username}@example.com')
-    db.session.add(user)
-    db.session.commit()
+if User.query.count() == 0:
+    for username in ('admin', 'guest'):
+        user = User(username=username, email=f'{username}@example.com')
+        db.session.add(user)
+        db.session.commit()
 
 
 @app.route('/')
@@ -38,3 +39,8 @@ def users():
             'email': user.email
         } for user in users]
     })
+
+
+@app.route('/shell')
+def shell():
+    raise ValueError
