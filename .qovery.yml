@@ -1,0 +1,13 @@
+application:
+  name: qovery-test
+  project: test
+  publicly_accessible: true
+  organization: QoveryCommunity
+  ram: 256MB
+
+routers:
+- name: main
+  routes:
+  - application_name: qovery-test
+    paths:
+    - /
