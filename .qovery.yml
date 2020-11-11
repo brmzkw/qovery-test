@@ -11,3 +11,8 @@ routers:
   - application_name: qovery-test
     paths:
     - /
+
+databases:
+- type: postgresql
+  version: "11.5"
+  name: my-db
