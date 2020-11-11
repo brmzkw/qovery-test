@@ -8,6 +8,8 @@ PACKAGE = 'qovery_test'
 DEPENDENCIES = [
     'flask',
     'flask-sqlalchemy',
+    'psycopg2',
+    'sqlalchemy',
 ]
 
 TEST_DEPENDENCIES = [
